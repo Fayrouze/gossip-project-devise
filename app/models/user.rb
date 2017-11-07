@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
          has_many :gossips
+
+         attr_accessor :code
+  validates :code,
+    on: :create,
+    presence: true,
+    inclusion: { in: ["1201PARIS"] } 
+
 end

@@ -1,2 +1,11 @@
-<h1>Gossips#new</h1>
-<p>Find me in app/views/gossips/new.html.erb</p>
+<h1> Creer un gossip</h1>
+
+<%= form_tag (gossips_path) do %>
+
+	<%= label_tag 'content', 'ton gossip' %>
+	<%= text_field_tag 'author' %>
+
+	<%= submit_tag "Poster un gossip"%>
+<% end %>
+
+<%= link_to 'Retour à la liste', gossips_path %>
